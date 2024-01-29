@@ -8,11 +8,13 @@ namespace _esercizio
         {
             Console.WriteLine("Creazione classi");
 
+            //classe Atleta
             Atleta atleta1 = new Atleta("Mario", "Rossi", 18, "Calcio", "annuale");
             atleta1.GetMonthlyPayment(atleta1.Iscrizione, atleta1.SetMonthlyPayment());
-
-
-    
+            
+            //classe Dipendente
+            Dipendente utente1 = new Dipendente("Aldo", "Bianchi", 50, "indeterminato", "impiegato");
+            Console.WriteLine("La paga oraria di " + utente1.Nome + " sarà " +utente1.getHourlyWage());   
         }
     }
 
@@ -99,10 +101,14 @@ namespace _esercizio
             this.Peso = peso;
             this.Proprietario = propr; 
         } 
+
+        public void getInfo()
+        {
+            Console.WriteLine(Name+"ha "+Eta+" pesa "+Peso+" il suo proprietario è"+Proprietario);
+        }
+
+
     }
-
-    
-
 
 
 
